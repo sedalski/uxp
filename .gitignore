@@ -1,0 +1,10 @@
+ignored files
+
+#IDE
+.idea/**/*
+
+#node packages
+/node_modules
+
+#builds
+/dist
