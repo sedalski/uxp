@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+    <title>UXPin ♥ recrutask</title>
+    <link rel="stylesheet" type="text/css" href="./dist/main.css">
+</head>
+<body>
+<main>
+    <section class="sidepanel">
+
+        <!-- section: button section -->
+        <section class="button-section">
+            <ul class="button-section__button-group">
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-align-left">
+                    </button>
+                </li>
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-align-center">
+                    </button>
+                </li>
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-align-right">
+                    </button>
+                </li>
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-align-top">
+                    </button>
+                </li>
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-align-middle">
+                    </button>
+                </li>
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-align-bottom">
+                    </button>
+                </li>
+            </ul>
+            <ul class="button-section__button-group">
+
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-to-bottom">
+                    </button>
+                </li>
+                <li class="button-section__button-item">
+                    <button class="btn btn--large btn--icon icon-to-top">
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- section: dimensions, position, orientation -->
+
+        <section class="sidepanel__section">
+            <div class="sidepanel__section-wrapper">
+                <fieldset id="dimensions">
+                    <div class="fieldset">
+                        <div class="input-element input-element--label-inline input-element--width-2">
+                            <label for="dimension-w">
+                                W
+                            </label>
+                            <input id="dimension-w" type="number" value="0">
+                        </div>
+                        <div class="input-element input-element--button">
+                            <input id="ratio-lock" type="checkbox">
+                            <label for="ratio-lock" class="btn btn--arrows btn--icon">
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="input-element input-element--label-inline input-element--width-2">
+                            <label for="dimension-h">
+                                H
+                            </label>
+                            <input id="dimension-h" type="number" value="0">
+                        </div>
+                        <div class="input-element input-element--anchor input-element--width-1">
+                            <input id="tl" type="radio" name="anchor" checked>
+                            <label for="tl">
+                            </label>
+                            <input id="tc" type="radio" name="anchor">
+                            <label for="tc">
+                            </label>
+                            <input id="tr" type="radio" name="anchor">
+                            <label for="tr">
+                            </label>
+                            <input id="ml" type="radio" name="anchor">
+                            <label for="ml">
+                            </label>
+                            <input id="mc" type="radio" name="anchor">
+                            <label for="mc">
+                            </label>
+                            <input id="mr" type="radio" name="anchor">
+                            <label for="mr">
+                            </label>
+                            <input id="bl" type="radio" name="anchor">
+                            <label for="bl">
+                            </label>
+                            <input id="bc" type="radio" name="anchor">
+                            <label for="bc">
+                            </label>
+                            <input id="br" type="radio" name="anchor">
+                            <label for="br">
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="position">
+                    <div class="fieldset">
+                        <div class="input-element input-element--label-inline input-element--width-2">
+                            <label for="position-x">
+                                X
+                            </label>
+                            <input id="position-x" type="number" value="0">
+                        </div>
+                        <div class="fieldset__separator"></div>
+                        <div class="input-element input-element--label-inline input-element--width-2">
+                            <label for="position-y">
+                                Y
+                            </label>
+                            <input id="position-y" type="number" value="0">
+                        </div>
+                        <div class="input-element input-element--checkbox input-element--width-1">
+                            <input id="sticky" type="checkbox">
+                            <label for="sticky">
+                                <span>Sticky</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="rotation">
+                    <div class="fieldset">
+                        <legend>Rotation</legend>
+                        <div class="input-element input-element--width-1 input-element--label-bottom unit-degree input-element--unit-back"
+                             data-value="0" data-unit="°">
+                            <input id="r-degrees" value="0">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+
+
+        <!-- section: radius, padding, layer -->
+
+        <section class="sidepanel__section">
+            <div class="sidepanel__section-wrapper">
+
+                <fieldset id="radius">
+                    <div class="fieldset fieldset-lockable fieldset--lock">
+                        <legend>Radius</legend>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-visible">
+                            <input id="top-left" type="number" value="2" min="0">
+                            <label for="top-left">
+                                TL
+                            </label>
+                        </div>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-hidden">
+                            <input id="top-right" type="number" value="2" min="0">
+                            <label for="top-right">
+                                TR
+                            </label>
+                        </div>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-hidden">
+                            <input id="bottom-right" type="number" value="2" min="0">
+                            <label for="bottom-right">
+                                BR
+                            </label>
+                        </div>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-hidden">
+                            <input id="bottom-left" type="number" value="2" min="0">
+                            <label for="bottom-left">
+                                BL
+                            </label>
+                        </div>
+                        <div class="input-element input-element--button input-element--lock fieldset-lock ">
+                            <input id="radius-lock" type="checkbox">
+                            <label for="radius-lock" class="btn btn--border icon-radius btn--icon">
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="padding">
+                    <div class="fieldset fieldset-lockable fieldset--lock">
+                        <legend>Padding</legend>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-visible">
+                            <input id="p-top" type="number" value="2" min="0">
+                            <label for="p-top">
+                                Top
+                            </label>
+                        </div>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-hidden">
+                            <input id="p-left" type="number" value="2" min="0">
+                            <label for="p-left">
+                                Left
+                            </label>
+                        </div>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-hidden">
+                            <input id="p-right" type="number" value="2" min="0">
+                            <label for="p-right">
+                                Right
+                            </label>
+                        </div>
+                        <div class="input-element input-element--width-1 input-element--label-bottom input-element__lock-hidden">
+                            <input id="p-bottom" type="number" value="2" min="0">
+                            <label for="p-bottom">
+                                Bottom
+                            </label>
+                        </div>
+                        <div class="input-element input-element--button input-element--lock fieldset-lock">
+                            <input id="padding-lock" type="checkbox">
+                            <label for="padding-lock" class="btn btn--border  icon-padding  btn--icon">
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="layer">
+                    <div class="fieldset">
+                        <legend>Layer</legend>
+                        <div class="input-element input-element--width-3 input-element--label-bottom dropdown">
+                            <span class="dropdown__opener"></span>
+                            <input id="l-blending" value="Normal">
+                            <label for="l-blending">
+                                Blending
+                            </label>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__list-item" data-value="Normal">Normal</li>
+                                    <li class="dropdown__list-item" data-value="Color">Color</li>
+                                    <li class="dropdown__list-item" data-value="Color-Burn">Color-Burn</li>
+                                    <li class="dropdown__list-item" data-value="Color-Dodge">Color-Dodge</li>
+                                    <li class="dropdown__list-item" data-value="Darken">Darken</li>
+                                    <li class="dropdown__list-item" data-value="Difference">Difference</li>
+                                    <li class="dropdown__list-item" data-value="Exclusion">Exclusion</li>
+                                    <li class="dropdown__list-item" data-value="Hard-Light">Hard-Light</li>
+                                    <li class="dropdown__list-item" data-value="Hue">Hue</li>
+                                    <li class="dropdown__list-item" data-value="Hue">Lighten</li>
+                                    <li class="dropdown__list-item" data-value="Luminosity">Luminosity</li>
+                                    <li class="dropdown__list-item" data-value="Multiply">Lighten</li>
+                                    <li class="dropdown__list-item" data-value="Overlay">Overlay</li>
+                                    <li class="dropdown__list-item" data-value="Saturation">Saturation</li>
+                                    <li class="dropdown__list-item" data-value="Screen">Screen</li>
+                                    <li class="dropdown__list-item" data-value="Soft-Light">Soft-Light</li>
+                                </ul>
+                        </div>
+
+                        <div class="input-element input-element--width-1a input-element--label-bottom input-element--unit-back"
+                             data-value="100" data-unit="%">
+                            <input id="l-opacity" type="number" value="100">
+                            <label for="l-opacity">
+                                Opacity
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+
+
+        <!-- section: fill -->
+
+        <section class="sidepanel__section accordion">
+            <header class="sidepanel__section-title accordion__head">
+                <h3>
+                    fill
+                </h3>
+                <button class="btn btn--icon icon-close">
+
+                </button>
+            </header>
+            <div class="accordion__drawer">
+                <div class="sidepanel__section-wrapper accordion__content">
+                    <fieldset id="fill-1">
+                        <div class="fieldset color-picker">
+                            <div class="input-element input-element--checkbox">
+                                <input id="option-1-toggle" type="checkbox" checked>
+                                <label for="option-1-toggle">
+                                </label>
+                            </div>
+                            <div class="input-element input-element__color-preview " style="background-color: #F4157F">
+                            </div>
+
+                            <div class="input-element  input-element--width-2 input-element--unit-front color-picker__hex">
+                                <input id="color-hex-1" maxlength="6" value="F4157F">
+                            </div>
+                            <div class="input-element  input-element--width-1a input-element--unit-back" data-value="0"
+                                 data-unit="%">
+                                <input id="opacity-1" type="number" value="0">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="fill-2">
+                        <div class="fieldset">
+
+                            <div class="input-element input-element--checkbox">
+                                <input id="option-2-toggle" type="checkbox" checked>
+                                <label for="option-2-toggle">
+                                </label>
+                            </div>
+                            <div class="input-element input-element__color-preview"
+                                 style="background: linear-gradient(90deg, #FB1471, #D521C9 )">
+                            </div>
+                            <legend>Gradient</legend>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section: stroke -->
+
+        <section class="sidepanel__section accordion">
+            <header class="sidepanel__section-title accordion__head">
+                <h3>
+                    stroke
+                </h3>
+                <button class="btn btn--icon icon-close">
+                </button>
+            </header>
+            <div class="accordion__drawer ">
+                <div class="sidepanel__section-wrapper accordion__content">
+                    <fieldset id="stroke-1">
+                        <div class="fieldset">
+
+                            <div class="input-element input-element--checkbox">
+                                <input id="option-3-toggle" type="checkbox" checked>
+                                <label for="option-3-toggle">
+                                </label>
+                            </div>
+                            <div class="input-element input-element__color-preview " style="background-color: #F4157F">
+                            </div>
+
+                            <div class="input-element  input-element--width-2 input-element--unit-front">
+                                <input id="color-2-hex" maxlength="6" value="F4157F">
+                            </div>
+                            <div class="input-element input-element--width-1a dropdown input-element--stroke-style">
+                                <input id="stroke-style" value="solid">
+                                <span class="stroke-line-type"></span>
+                                <span class="dropdown__opener"></span>
+
+                                <div class="dropdown__list-wrapper">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__list-item" data-value="solid">
+                                            <span class="stroke-line-type stroke-line-type--solid"></span>
+                                        </li>
+                                        <li class="dropdown__list-item" data-value="dashed">
+                                            <span class="stroke-line-type stroke-line-type--dashed"></span>
+                                        </li>
+                                        <li class="dropdown__list-item" data-value="dotted">
+                                            <span class="stroke-line-type stroke-line-type--dotted"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="input-element  input-element--width-1a">
+                                <input id="opacity-2" type="number" min="0" max="100" value="0">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section: shadow -->
+
+        <section class="sidepanel__section accordion">
+            <header class="sidepanel__section-title accordion__head">
+                <h3>
+                    shadow
+                </h3>
+                <button class="btn btn--icon icon-close">
+                </button>
+            </header>
+            <div class="accordion__drawer ">
+                <div class="sidepanel__section-wrapper accordion__content">
+                    <fieldset id="shadow-1">
+                        <div class="fieldset">
+
+                            <div class="input-element input-element--checkbox input-element--button">
+                                <input id="option-4-toggle" type="checkbox" checked>
+                                <label for="option-4-toggle">
+                                </label>
+                            </div>
+                            <div class="input-element input-element__color-preview input-element--button">
+                                <div class="color-container" style="background-color: #000; opacity: 0.4"></div>
+                            </div>
+                            <div class="input-element input-element--width-1a input-element--label-bottom input-element--unit-back"
+                                 data-value="0" data-unit="%">
+                                <input id="shadow-opacity" type="number" value="0">
+                                <label for="shadow-opacity">
+                                    Opacity
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="shadow-x" type="number" value="0">
+                                <label for="shadow-x">
+                                    X
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="shadow-y" type="number" value="0">
+                                <label for="shadow-y">
+                                    Y
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="shadow-blur" type="number" value="0">
+                                <label for="shadow-blur">
+                                    Blur
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="shadow-spread" type="number" value="0">
+                                <label for="shadow-spread">
+                                    Spread
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section: inner shadow -->
+
+        <section class="sidepanel__section accordion">
+            <header class="sidepanel__section-title accordion__head">
+                <h3>
+                    shadow
+                </h3>
+                <button class="btn btn--icon icon-close">
+                </button>
+            </header>
+            <div class="accordion__drawer ">
+                <div class="sidepanel__section-wrapper accordion__content">
+                    <fieldset id="inner-shadow-1">
+                        <div class="fieldset">
+
+                            <div class="input-element input-element--checkbox input-element--button">
+                                <input id="option-5-toggle" type="checkbox" checked>
+                                <label for="option-4-toggle">
+                                </label>
+                            </div>
+                            <div class="input-element input-element__color-preview input-element--button">
+                                <div class="color-container" style="background-color: #000; opacity: 0.4"></div>
+                            </div>
+                            <div class="input-element input-element--width-1a input-element--label-bottom input-element--unit-back"
+                                 data-value="0" data-unit="%">
+                                <input id="inner-shadow-opacity" type="number" value="0">
+                                <label for="shadow-opacity">
+                                    Opacity
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="inner-shadow-x" type="number" value="0">
+                                <label for="shadow-x">
+                                    X
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="inner-shadow-y" type="number" value="0">
+                                <label for="shadow-y">
+                                    Y
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="inner-shadow-blur" type="number" value="0">
+                                <label for="shadow-blur">
+                                    Blur
+                                </label>
+                            </div>
+                            <div class="input-element input-element--width-1 input-element--label-bottom">
+                                <input id="inner-shadow-spread" type="number" value="0">
+                                <label for="shadow-spread">
+                                    Spread
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+<div class="dropdown-wrapper">
+
+</div>
+<script src="./dist/main.bundle.js"></script>
+</body>
+</html>
